@@ -8,7 +8,11 @@ let options = document.querySelectorAll(".options")
 let scoree = document.querySelector(".score")
 let box = document.querySelector(".box")
 let submit = document.querySelector(".submit")
+let option = document.querySelector(".option")
+let buttonss = document.querySelector(".buttonss")
+let heading = document.querySelector(".heading")
 let start = document.querySelector(".start")
+let hh = document.querySelector(".hh")
 let index = 0;
 
 let arr = ["1. Which is the largest planet in our Solar System?", "2. Who is known as the “Father of the Indian Constitution”?", "3. Which gas is most abundant in the Earth's atmosphere", "4. What is the national animal of India?"]
@@ -102,7 +106,7 @@ next.addEventListener("click", () => {
             next.style.display = "none"
             next.disabled = true
         }
-        else{
+        else {
             alert("u havent select")
         }
     }
@@ -114,20 +118,44 @@ next.addEventListener("click", () => {
 submit.addEventListener("click", () => {
     console.log(answerindex)
     checkanswer()
+    ques.style.display = "none"
+    option.style.display = "none"
+    buttonss.style.display = "none"
+    heading.style.fontSize="4vh"
+    heading.innerHTML = `your score is ${score} `
+    hh.style.display = "block"
+    hh.innerHTML="YOUR WRONG QUESTIONS AND THEIR CORRECT ANSWER ARE"
+      
+    for (let i = 0; i < checked.length; i++) {
+    let aa = document.createElement("div")
+    aa.textContent = ` ${checked[i]} Answer:${ansss[i]}`
+    box.appendChild(aa)
+        
+    }
+
+ 
+
+
+    console.log(checked)
     console.log(score)
 })
-
+let checked = []
+let ansss = []
 let score = 0;
 function checkanswer() {
     for (let i = 0; i < answerindex.length; i++) {
         if (answerindex[i] == q[i].correct) {
             score++;
-
+        }
+        else {
+            checked.push(arr[i])
+            ansss.push(q[i].option[q[i].correct - 1])
         }
 
-
     }
+
     return score
 }
+
 
 
