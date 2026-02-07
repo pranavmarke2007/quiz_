@@ -1,0 +1,87 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 70vh;
+    height: 70vh;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+}
+.hh{
+    display: none;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+}
+
+.ques {
+    font-size: 5vh;
+}
+
+.options {
+    width: 60vh;
+    height: 5vh;
+    background-color: aliceblue;
+    border: 2px solid black;
+    font-size: 2vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+
+
+    cursor: pointer;
+}
+
+.options:hover {
+    cursor: pointer;
+    background-color: black;
+    color: aliceblue;
+}
+
+.next {
+    border: 2px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    align-self: center;
+    /* margin-top: 15px; */
+    align-self: center;
+    display: none;
+
+}
+
+.buttonss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+    align-content: center;
+}
+
+.submit {
+    display: none;
+    align-self: center;
+    width: auto;
+    height: auto;
+    font-weight: 100;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+.start{
+    display: block;
+}
